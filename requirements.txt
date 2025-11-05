@@ -1,0 +1,9 @@
+gymnasium[toy-text]
+requests
+flask
+pillow
+pandas
+matplotlib
+dotenv
+numpy
+gunicorn

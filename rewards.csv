@@ -1,0 +1,12 @@
+player_name,timestamp,env_name,reward,steps
+test Lars,2025-09-18T08:46:56.769025,FrozenLake,1.0,6
+test Lars,2025-09-18T08:47:00.380289,FrozenLake,0.0,5
+test Lars,2025-09-18T08:47:04.374074,FrozenLake,1.0,7
+test Lars,2025-09-18T08:47:09.375233,FrozenLake,1.0,6
+test Lars,2025-09-18T08:48:20.075324,FrozenLake,1.0,6
+test Lars,2025-09-18T09:57:08.349078,Taxi,15.0,6
+test Lars,2025-09-18T09:57:27.880062,Taxi,5.0,16
+test Lars,2025-09-18T09:57:38.180291,Taxi,9.0,12
+test Lars 2,2025-09-18T10:20:06.207764,FrozenLake,1.0,6
+test Lars 2,2025-09-18T10:20:08.036582,FrozenLake,0.0,2
+test Lars 2,2025-09-18T10:20:10.887816,FrozenLake,1.0,6

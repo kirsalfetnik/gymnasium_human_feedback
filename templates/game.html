@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gymnasium Player - Human Performance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        const controls = {{ controls | tojson }};
+        const description = {{ description | tojson }};
+
+        const keyToAction = {};
+        controls.forEach(control => {
+            keyToAction[control.key] = control.action;
+        });
+
+        document.addEventListener('keydown', async (event) => {
+            let action = null;
+            if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(event.key)) {
+                event.preventDefault();
+            }
+
+            if (keyToAction.hasOwnProperty(event.key)) {
+                action = keyToAction[event.key];
+            } else if (event.key === 'r' || event.key === 'R') {
+                action = 'reset';
+            }
+
+            if (action !== null) await step(action);
+        });
+
+        async function step(action) {
+            const response = await fetch('/step', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ action: action})
+            });
+            const result = await response.json();
+            document.getElementById('env-image').src = result.image_data;
+            document.getElementById('reward').innerText = result.total_reward;
+            document.getElementById('score-plot').src = result.score_plot;
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col justify-between">
+
+    <!-- Header -->
+    <header class="bg-white shadow p-6 flex items-center justify-between relative sticky top-0 z-50">
+        <!-- Left: Home button -->
+        <div class="flex items-center space-x-4">
+            <button onclick="window.location.href='{{ url_for('index') }}'"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-xl shadow transition">
+                Home
+            </button>
+        </div>
+
+        <!-- Center: Title -->
+        <h1 class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-gray-800">
+            Gymnasium Player – Human Performance
+        </h1>
+    </header>
+
+    <!-- Page Intro Section -->
+    <section class="bg-green-50 border border-green-100 shadow-sm mx-6 my-6 p-6 rounded-2xl max-w-4xl w-full self-center text-center">
+        <h2 class="text-xl font-semibold text-gray-800 mb-2">
+            Play and Explore the Environment
+        </h2>
+        <p class="text-gray-700 leading-relaxed">
+            You are now inside the selected environment. Use the keyboard controls shown on the right
+            to interact with it in real time. Each action you take affects the state of the environment
+            and contributes to your total reward displayed below the simulation.
+        </p>
+        <p class="text-gray-700 mt-3 leading-relaxed">
+            The plot updates as you finish episodes, showing your performance compared to other users.
+            Try to understand the environment’s dynamics and aim to maximize your total reward!
+        </p>
+        {% if description %}
+            <p id="desc" class="text-gray-700 mt-3 leading-relaxed">{{ description }}</p>
+        {% endif %}
+    </section>
+
+
+    <!-- Main content -->
+    <main class="flex-grow flex flex-col items-center justify-center p-6">
+        <div class="bg-white rounded-2xl shadow-lg p-8 max-w-5xl w-full">
+
+            <!-- Player name -->
+            <p class="text-lg text-gray-700 mb-6">
+                <strong>Player:</strong> <span class="font-semibold">{{ name }}</span>
+            </p>
+
+            <!-- Environment and controls side by side -->
+            <div class="flex flex-col md:flex-row gap-8 mb-10">
+                <!-- Environment -->
+                <div class="flex-1 text-center">
+                    <img id="env-image" src="{{ image_data }}" alt="Environment"
+                        class="rounded-xl border border-gray-300 shadow-md mx-auto mb-4 max-h-[400px] object-contain">
+                    <h2 class="text-xl font-semibold text-gray-800">
+                        Total Reward: <span id="reward" class="text-blue-600 font-bold">{{ total_reward }}</span>
+                    </h2>
+                </div>
+
+                <!-- Controls -->
+                <div class="flex-1">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Controls</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        {% for c in controls %}
+                        <li class="bg-gray-100 rounded-lg shadow-sm">
+                            <button
+                                class="w-full text-left px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200"
+                                onclick="step('{{ c.action }}')"
+                            >
+                            <strong>{{ c.key }}</strong> → {{ c.label }}
+                            </button>
+                        </li>
+                        {% endfor %}
+                        <li class="bg-gray-100 rounded-lg shadow-sm">
+                            <button
+                                class="w-full text-left px-4 py-2 rounded-lg bg-gray-100 hover:bg-gray-200"
+                                onclick="step('reset')"
+                            >
+                            <strong>R</strong> → Reset Environment
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Visualization -->
+            {% if score_plot %}
+            <div class="flex justify-center">
+                <img id="score-plot" src="{{ score_plot }}" alt="Score Plot"
+                    class="rounded-xl border border-gray-300 shadow-md max-w-[40%] object-contain">
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 text-center text-gray-600 p-4">
+        <p class="text-sm">Project by <strong>Lars Stelzer</strong> & <strong>Joshua Wendland</strong></p>
+        <p class="text-sm mt-1">
+            🔒 <a href="https://gitlab.com/chair-of-artificial-intelligence-and-formal-methods/gymnasium-player-human-performance"
+                  target="_blank" class="underline hover:text-gray-800">
+                GitLab Repository
+            </a> (private)
+        </p>
+    </footer>
+</body>
+</html>
