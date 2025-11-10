@@ -236,3 +236,10 @@ Kirill,Taxi,20,297,1,-1,e0aa0544-9f9d-4e6c-a95b-2e14ed83abdb
 Kirill,Taxi,21,197,1,-1,e0aa0544-9f9d-4e6c-a95b-2e14ed83abdb
 Kirill,Taxi,22,97,5,20,e0aa0544-9f9d-4e6c-a95b-2e14ed83abdb
 Kirill,Taxi,1,85,3,-1,e0aa0544-9f9d-4e6c-a95b-2e14ed83abdb
+Kirill,GridWorld,1,"{'agent': array([0, 1]), 'target': array([1, 3])}",0,-1,a3cb0eb5-29ec-490c-95f2-c9f9039d5644
+Kirill,GridWorld,2,"{'agent': array([1, 1]), 'target': array([1, 3])}",1,-1,a3cb0eb5-29ec-490c-95f2-c9f9039d5644
+Kirill,GridWorld,3,"{'agent': array([1, 2]), 'target': array([1, 3])}",1,10,a3cb0eb5-29ec-490c-95f2-c9f9039d5644
+Kirill,GridWorld,1,"{'agent': array([1, 3]), 'target': array([1, 3])}",0,-1,a3cb0eb5-29ec-490c-95f2-c9f9039d5644
+Kirill,GridWorld,2,"{'agent': array([1, 3]), 'target': array([2, 2])}",0,-1,a3cb0eb5-29ec-490c-95f2-c9f9039d5644
+Kirill,GridWorld,3,"{'agent': array([2, 3]), 'target': array([2, 2])}",0,-1,a3cb0eb5-29ec-490c-95f2-c9f9039d5644
+Kirill,GridWorld,4,"{'agent': array([3, 3]), 'target': array([2, 2])}",2,-1,a3cb0eb5-29ec-490c-95f2-c9f9039d5644
