@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "pip>=23.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my-flask-gym-app"
+version = "0.1.0"
+description = "Flask app with custom Gymnasium environments"
+requires-python = ">=3.9"
+
+dependencies = [
+    "gymnasium[toy-text,classic-control,box2d]",
+    "requests",
+    "flask",
+    "pillow",
+    "pandas",
+    "matplotlib",
+    "python-dotenv",
+    "numpy",
+    "gunicorn"
+]

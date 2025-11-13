@@ -1,9 +1,9 @@
-gymnasium[toy-text]
+gymnasium[classic-control,box2d,toy-text]
 requests
 flask
 pillow
 pandas
 matplotlib
-dotenv
+python-dotenv
 numpy
 gunicorn

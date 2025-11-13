@@ -1,3 +1,5 @@
+from pandas.core.window.doc import kwargs_scipy
+
 from custom_envs.register_envs import *
 
 ENVIRONMENTS = {
@@ -37,5 +39,15 @@ ENVIRONMENTS = {
             {"key": "ArrowUp", "label": "Move Up", "action": 3},
         ],
         "description": "This is a custom environment created for the purpose of testing the Gymplayer logic."
+    },
+    "Pacman": {
+        "id": "ALE/Pacman-v5",
+        "kwargs": {},
+        "controls": [
+            {"key": "ArrowUp", "label": "Move Up", "action": 1},
+            {"key": "ArrowRight", "label": "Move Right", "action": 2},
+            {"key": "ArrowLeft", "label": "Move Left", "action": 3},
+            {"key": "ArrowDown", "label": "Move Down", "action": 4}
+        ]
     }
 }

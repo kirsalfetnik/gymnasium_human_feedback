@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gymnasium Player - Human Performance</title>
+    <title>GymCapture</title>
+    <link rel="icon" type="image/x-icon" href="/static/GymCapture_Logo.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         const controls = {{ controls | tojson }};
@@ -55,9 +56,14 @@
         </div>
 
         <!-- Center: Title -->
-        <h1 class="absolute left-1/2 transform -translate-x-1/2 text-2xl font-bold text-gray-800">
-            Gymnasium Player – Human Performance
-        </h1>
+        <div class="flex items-center justify-center space-x-3 relative">
+            <img src="{{ url_for('static', filename='GymCapture_Logo.svg') }}"
+                alt="GymCapture Logo"
+                class="h-[60px] w-auto">
+            <h1 class="text-3xl font-bold text-gray-800">GymCapture</h1>
+        </div>
+
+        <div> </div>
     </header>
 
     <!-- Page Intro Section -->
@@ -137,14 +143,21 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-200 text-center text-gray-600 p-4">
-        <p class="text-sm">Project by <strong>Lars Stelzer</strong> & <strong>Joshua Wendland</strong></p>
-        <p class="text-sm mt-1">
+    <footer class="bg-gray-200 text-gray-600 p-4 relative flex items-center justify-end">
+    <!-- Centered text -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 text-sm text-center">
+        <p>Project by <strong>Lars Stelzer</strong> & <strong>Joshua Wendland</strong></p>
+        <p class="mt-1">
             🔒 <a href="https://gitlab.com/chair-of-artificial-intelligence-and-formal-methods/gymnasium-player-human-performance"
-                  target="_blank" class="underline hover:text-gray-800">
+                 target="_blank"
+                 class="underline hover:text-gray-800">
                 GitLab Repository
             </a> (private)
         </p>
-    </footer>
+    </div>
+
+    <!-- Right side: Logo -->
+    <img src="{{ url_for('static', filename='AIFM-full.png') }}" class="h-[60px] w-auto">
+</footer>
 </body>
 </html>

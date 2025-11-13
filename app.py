@@ -2,11 +2,14 @@ import datetime
 import os
 from flask import Flask, render_template, request, jsonify, redirect, url_for, session
 import gymnasium as gym
+import ale_py
 from PIL import Image
 import io
 import base64
 import subprocess
 import pandas as pd
+from setuptools.command.register import register
+
 from env_config import ENVIRONMENTS
 import uuid
 import threading
@@ -24,7 +27,7 @@ app.secret_key = 'geheimes-passwort'  # nötig für Sessions
 
 user_data = {}
 ENV_NAMES = list(ENVIRONMENTS.keys())
-
+gym.register_envs(ale_py)
 
 REPO_URL = os.environ["REPO_URL"]
 LOCAL_DATA_PATH = "/tmp/repo"

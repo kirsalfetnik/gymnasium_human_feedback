@@ -1,7 +1,8 @@
-<p align="center">
-<img src="static/GymCapture Logo.svg" alt="GymCapture Logo" width="200"><br>
+<p style="text-align: center;">
+  <img src="static/GymCapture_Logo.svg" alt="GymCapture Logo" width="200"><br>
+  <strong>GymCapture</strong>
 </p>
-<h1 align="center">GymCapture</h1>
+
 
 
 Capture the performance of human players for any [Gymnasium](https://gymnasium.farama.org/) compatible environment.  
@@ -51,7 +52,7 @@ Custom environments can be added as playable environments the following way:
 from .<your-env> import <your-env-class>
 
 register(
-    id="<your-env-id>"
+    id="<your-env-id>",
     entry_point="custom_envs.<your-env>:<your-env-class>"
 )
 ```
