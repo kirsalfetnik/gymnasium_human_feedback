@@ -7,3 +7,4 @@ matplotlib
 python-dotenv
 numpy
 gunicorn
+ale_py
