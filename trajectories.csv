@@ -768,3 +768,10 @@ Kirill,FrozenLake,3,2,1,0,6916ed2e-0164-4420-be60-6bb3d1f7ce63
 Kirill,FrozenLake,4,6,1,0,6916ed2e-0164-4420-be60-6bb3d1f7ce63
 Kirill,FrozenLake,5,10,1,0,6916ed2e-0164-4420-be60-6bb3d1f7ce63
 Kirill,FrozenLake,6,14,2,1,6916ed2e-0164-4420-be60-6bb3d1f7ce63
+Kirill,GridWorld,1,"{'agent': array([0, 0]), 'target': array([3, 4])}",0,-1,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
+Kirill,GridWorld,2,"{'agent': array([1, 0]), 'target': array([3, 4])}",1,-1,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
+Kirill,GridWorld,3,"{'agent': array([1, 1]), 'target': array([3, 4])}",0,-1,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
+Kirill,GridWorld,4,"{'agent': array([2, 1]), 'target': array([3, 4])}",1,-1,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
+Kirill,GridWorld,5,"{'agent': array([2, 2]), 'target': array([3, 4])}",0,-1,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
+Kirill,GridWorld,6,"{'agent': array([3, 2]), 'target': array([3, 4])}",1,-1,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
+Kirill,GridWorld,7,"{'agent': array([3, 3]), 'target': array([3, 4])}",1,10,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
