@@ -775,3 +775,16 @@ Kirill,GridWorld,4,"{'agent': array([2, 1]), 'target': array([3, 4])}",1,-1,02ec
 Kirill,GridWorld,5,"{'agent': array([2, 2]), 'target': array([3, 4])}",0,-1,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
 Kirill,GridWorld,6,"{'agent': array([3, 2]), 'target': array([3, 4])}",1,-1,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
 Kirill,GridWorld,7,"{'agent': array([3, 3]), 'target': array([3, 4])}",1,10,02ec5b33-b26a-42da-b8b6-e8f0f4a70436
+Kirill,FrozenLake,1,0,2,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,2,1,2,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,3,2,1,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,4,6,1,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,5,10,1,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,6,14,1,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,7,14,2,1,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,1,15,1,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,2,4,1,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,3,8,2,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,4,9,2,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,5,10,1,0,5b6246d5-f4e7-44ca-b439-d579d48ba640
+Kirill,FrozenLake,6,14,2,1,5b6246d5-f4e7-44ca-b439-d579d48ba640
