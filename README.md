@@ -8,7 +8,24 @@
 Capture the performance of human players for any [Gymnasium](https://gymnasium.farama.org/) compatible environment.  
 Distribute the app with this link: https://gym-player.onrender.com
 
-## Adding new Environments
+## Accessing Results
+
+The user interactions are saved in two csv files `rewards.csv` and `trajectories.csv`. The files are stored in the **results branch** of the repo not in the main branch. They are stored in the following format:
+
+`rewards.csv`:
+
+|  player_name  |  timestamp  |  env_name  | reward | steps |  id  |
+|:-------------:|:-----------:|:----------:|:------:|:-----:|:----:|
+|    string     |    date     |   string   | float  |  int  | uuid |
+
+`trajectories.csv`:
+
+| player_name | env_name | step |   state   |  action   | reward | episode_id |
+|:-----------:|:--------:|:----:|:---------:|:---------:|:------:|:----------:|
+|   string    |  string  | int  | _ObsType_ | _ActType_ | float  |    uuid    |
+
+
+## Adding Environments
 
 The app reads available environments from a central config file `env_config.py`, which consists of a dictionary `ENVIRONMENTS`. Environments must support `render_mode="rgb_array"` and have a discrete action space.
 Each entry has the following structure and new environments can be added by adding another entry:

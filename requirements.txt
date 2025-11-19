@@ -1,3 +1,4 @@
+swig
 gymnasium[classic-control,box2d,toy-text]
 requests
 flask
@@ -7,4 +8,4 @@ matplotlib
 python-dotenv
 numpy
 gunicorn
-ale_py
+ale-py

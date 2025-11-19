@@ -17,5 +17,6 @@ dependencies = [
     "matplotlib",
     "python-dotenv",
     "numpy",
-    "gunicorn"
+    "gunicorn",
+    "ale-py"
 ]

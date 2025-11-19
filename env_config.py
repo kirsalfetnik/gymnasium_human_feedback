@@ -1,5 +1,3 @@
-from pandas.core.window.doc import kwargs_scipy
-
 from custom_envs.register_envs import *
 
 ENVIRONMENTS = {
@@ -48,6 +46,16 @@ ENVIRONMENTS = {
             {"key": "ArrowRight", "label": "Move Right", "action": 2},
             {"key": "ArrowLeft", "label": "Move Left", "action": 3},
             {"key": "ArrowDown", "label": "Move Down", "action": 4}
+        ]
+    },
+    "Lunar Lander": {
+        "id": "LunarLander-v3",
+        "kwargs": {},
+        "controls": [
+            {"key": " ", "label": "Do Nothing", "action": 0},
+            {"key": "ArrowLeft", "label": "Fire Left Engine", "action": 1},
+            {"key": "ArrowUp", "label": "Fire Main Engine", "action": 2},
+            {"key": "ArrowRight", "label": "Fire Right Engine", "action": 3}
         ]
     }
 }

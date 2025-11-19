@@ -8,7 +8,6 @@ import io
 import base64
 import subprocess
 import pandas as pd
-from setuptools.command.register import register
 
 from env_config import ENVIRONMENTS
 import uuid
