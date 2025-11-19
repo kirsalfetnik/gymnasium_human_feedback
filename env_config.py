@@ -57,5 +57,16 @@ ENVIRONMENTS = {
             {"key": "ArrowUp", "label": "Fire Main Engine", "action": 2},
             {"key": "ArrowRight", "label": "Fire Right Engine", "action": 3}
         ]
+    },
+    "Cliff Walking": {
+        "id": "CliffWalking-v1",
+        "kwargs": {},
+        "controls": [
+            {"key": "ArrowRight", "label": "Move Right", "action": 0},
+            {"key": "ArrowDown", "label": "Move Down", "action": 1},
+            {"key": "ArrowLeft", "label": "Move Left", "action": 2},
+            {"key": "ArrowUp", "label": "Move Up", "action": 3},
+        ],
+        "description": "You walk around the cliff"
     }
 }
